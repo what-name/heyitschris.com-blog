@@ -1,0 +1,91 @@
+baseURL = "https://blog.heyitschris.com"
+languageCode = "en-us"
+title = "Blog | Hey, it's Chris"
+theme = "amperage"
+
+# Number of posts shown per page
+paginate = 5
+
+# Language sections
+[languages]
+    [languages.en]
+        contentDir = "content"
+        languageName = "English"
+        languageCode = "en"
+        title = "Blog | Hey, it's Chris"
+        description = "This is the blog of the heyitschris.com website - Chris Nagy"
+        weight = 1
+
+# Menu elements
+[[menu.main]]
+    identifier = "home"
+    name = "Home"
+    url = "/"
+    weight = 1
+[[menu.main]]
+    identifier = "about"
+    name = "About"
+    url = "/about"
+    weight = 2
+[[menu.main]]
+    identifier = "Resume"
+    name = "Resume"
+    url = "https://heyitschris.com"
+    weight = 3
+[[menu.main]]
+    identifier = "github"
+    name = "GitHub"
+    url = "https://github.com/what-name"
+    weight = 4
+[[menu.main]]
+    identifier = "twitter"
+    name = "Twitter"
+    url = "https://twitter.com/chris_the_nagy"
+    weight = 5
+
+
+# Enable only tags taxonomy
+[taxonomies]
+    tag = "tags"
+
+[params]
+    copyright = "Chris Nagy" # Name shown on footer copyright
+    themeColor = "#333" # Theme color displayed on mobile browsers
+
+    # Default AMP components for the whole site
+    ampElements = ["amp-analytics", "amp-social-share", "amp-install-serviceworker", "amp-iframe"]
+
+    # Google Analytics code
+    # googleAnalytics = ""
+
+    # Adsense publisher code
+    # adsensePublisher = ""
+
+    # Comments Iframe URL
+    # commentsEmbedUrl = "https://comments.example.com"
+
+    # Social sites for metatags
+    twitterSite = "@chris_the_nagy"
+
+    # Structured data elements
+    socialProfiles = ["https://twitter.com/chris_the_nagy","https://www.linkedin.com/in/example/","https://github.com/example"]
+
+    alternatePageName = "Hey, it's Chris"
+    organizationLogo = "/logo.png"
+    organizationName = ""
+
+    publisherName = "Hey, it's Chris"
+    publisherLogo = "/"
+    publisherLogoWidth = 600
+    publisherLogoHeight = 60
+
+[deployment]
+[[deployment.targets]]
+name = "heyItsChrisBlogDeployment"
+# S3; see https://gocloud.dev/howto/blob/#s3
+# For S3-compatible endpoints, see https://gocloud.dev/howto/blob/#s3-compatible
+URL = "s3://heyitschris-com-blog?region=us-east-1"
+
+# If you are using a CloudFront CDN, deploy will invalidate the cache as needed.
+# User does not have access to this resource as of right now
+# cloudFrontDistributionID = <ID>
