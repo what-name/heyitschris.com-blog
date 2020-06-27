@@ -1,7 +1,7 @@
 ---
 title: "That Post"
 date: 2020-06-26T23:33:52+02:00
-draft: true
+draft: false
 ---
 
 

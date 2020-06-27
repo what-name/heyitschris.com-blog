@@ -1,24 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Blog | Hey, it&#39;s Chris</title>
-    <link>https://blog.heyitschris.com/</link>
-    <description>Recent content on Blog | Hey, it&#39;s Chris</description>
+    <title>Posts on Blog | Hey, it&#39;s Chris</title>
+    <link>https://blog.heyitschris.com/posts/</link>
+    <description>Recent content in Posts on Blog | Hey, it&#39;s Chris</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Fri, 26 Jun 2020 23:33:52 +0200</lastBuildDate>
     
-	<atom:link href="https://blog.heyitschris.com/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://blog.heyitschris.com/posts/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>About</title>
-      <link>https://blog.heyitschris.com/about/</link>
-      <pubDate>Fri, 26 Jun 2020 23:37:24 +0200</pubDate>
-      
-      <guid>https://blog.heyitschris.com/about/</guid>
-      <description>Hey there, my name is Chris Nagy. I&amp;rsquo;ve had a passion for all things running on electricity.</description>
-    </item>
     
     <item>
       <title>That Post</title>
