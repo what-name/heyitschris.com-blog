@@ -71,4 +71,4 @@ As you see, you should **never** commit access and secret keys to your repos. Th
 After all the backend was established - the CloudFront distribution, the CI/CD pipeline, the CloudFormation template - the only thing left was to add the `blog.heyitschris.com` entry into Route53. There is a deployment pipeline for every piece of the whole website at this point, so this step was nothing more than an extra resource in the CloudFormation template and `git push`. The resource deployed, this sentence finished and this blog's first iteration up & running publicly.
 
 #### Closing thoughts
-If you'd like to see the repo, you can [reach it here](https://github.com/what-name/heyitschris.com-blog)!
+If you'd like to see the repo, you can [reach it here](https://github.com/what-name/heyitschris.com-blog).
