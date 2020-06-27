@@ -3,20 +3,18 @@
 	<head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
 
-<title>Tags</title>
-    
-
+<title>How it&#39;s made: This Blog</title>
     
 <meta name="description" content="" />
-<link rel="canonical" href="https://blog.heyitschris.com/tags/" >
-<link rel="sitemap" href="https://blog.heyitschris.com/sitemap.xml" type="application/xml" /><meta property="og:title" content="Tags">
-<meta property="og:url" content="https://blog.heyitschris.com/tags/">
+<link rel="canonical" href="https://blog.heyitschris.com/posts/a-blog-post-about-my-blog/" >
+<link rel="sitemap" href="https://blog.heyitschris.com/sitemap.xml" type="application/xml" /><meta property="og:title" content="How it&#39;s made: This Blog">
+<meta property="og:url" content="https://blog.heyitschris.com/posts/a-blog-post-about-my-blog/">
 <meta property="og:description" content="">
 <meta property="og:image" content="https://blog.heyitschris.com/logo.png">
 <meta property="og:type" content="article">
 <meta property="og:site_name" content=""><meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Tags">
-<meta name="twitter:url" content="https://blog.heyitschris.com/tags/">
+<meta name="twitter:title" content="How it&#39;s made: This Blog">
+<meta name="twitter:url" content="https://blog.heyitschris.com/posts/a-blog-post-about-my-blog/">
 <meta name="twitter:description" content="">
 <meta name="twitter:image" content="https://blog.heyitschris.com/logo.png">
 <meta name="twitter:site" content="@chris_the_nagy"><meta name="theme-color" content="#333"/>
@@ -56,6 +54,12 @@
   
   
   
+    
+  
+
+  
+  
+  
 
 
 <script type="application/ld+json">
@@ -79,23 +83,73 @@
           "@type": "ListItem",
           "position":  2 ,
           "item": {
-            "@id": "https:\/\/blog.heyitschris.com\/tags\/",
-            "name": "Tags"
+            "@id": "https:\/\/blog.heyitschris.com\/posts\/",
+            "name": "Posts"
+          }
+        }
+      
+        ,
+        {
+          "@type": "ListItem",
+          "position":  3 ,
+          "item": {
+            "@id": "https:\/\/blog.heyitschris.com\/posts\/a-blog-post-about-my-blog\/",
+            "name": "A blog post about my blog"
           }
         }
        ]
   }
-</script>
-  <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "ItemList",
-      "itemListElement": [
-        
-      ]
-    }
-  </script>
-<header class="header"><nav class="header__menu">
+</script><script type="application/ld+json">
+  {
+    "@context":"http://schema.org",
+    "@type": "BlogPosting",
+    "image": "https:\/\/blog.heyitschris.com",
+    "url": "https:\/\/blog.heyitschris.com\/posts\/a-blog-post-about-my-blog\/",
+    "headline": "How it\u0027s made: This Blog",
+    "alternativeHeadline": "How it\u0027s made: This Blog",
+    "dateCreated": "2020-06-27T16:12:39",
+    "datePublished": "2020-06-27T16:12:39",
+    "dateModified": "2020-06-27T16:12:39",
+    "inLanguage": "en",
+    "isFamilyFriendly": "true",
+    "copyrightYear": "2020",
+    "copyrightHolder": "",
+    "accountablePerson": {
+      "@type": "Person",
+      "name": "",
+      "url": ""
+    },
+    "author": {
+      "@type": "Person",
+      "name": "",
+      "url": "https:\/\/blog.heyitschris.com",
+      "image": "https:\/\/blog.heyitschris.com",
+      "description": ""
+    },
+    "creator": {
+      "@type": "Person",
+      "name": "",
+      "url": "https:\/\/blog.heyitschris.com",
+      "image": "https:\/\/blog.heyitschris.com",
+      "description": ""
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Hey, it\u0027s Chris",
+      "url": "https:\/\/blog.heyitschris.com",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "\/",
+        "width":"600",
+        "height":"60"
+      }
+    },
+    "mainEntityOfPage": "https:\/\/blog.heyitschris.com\/posts\/a-blog-post-about-my-blog\/",
+    "keywords": "null",
+    "genre": "null",
+    "articleSection": "Posts"
+  }
+</script><header class="header"><nav class="header__menu">
     <a class="header__menu__logo" data-rel="prefetch" href="https://blog.heyitschris.com" aria-label="Go back to the homepage"></a>
 <ul class="header__menu__list">
     
@@ -145,9 +199,60 @@
 </ul></nav></header>
 		<main class="main">
 	<article class="content">
-		
-	</article>
-	
+		<h2 id="how-its-made-this-blog">How it&rsquo;s made: This Blog.</h2>
+<p>I&rsquo;ve always wanted to have a blog. Putting my thoughts into writing has always benefitted me and I&rsquo;ve definitely started paying more attention to do it as often as I can. After I completed <a href="https://forrestbrazeal.com/">Forrest Brazeal&rsquo;s</a> <a href="https://cloudresumechallenge.dev/">Cloud Resume Challange</a> and had my own website running on Serverless AWS, I thought why not extend it with a blog. I wrote some articles on my Medium page as well, but seeing #100DaysOfCode &amp; #100DaysOfCloud take off, I decided it&rsquo;s time to make my own. This is the intorductory story, now let&rsquo;s get down to the <em>how</em>.</p>
+<p><img src="/images/hugo-screenshot.png" alt="Hugo Screenshot"></p>
+<p>I knew I wanted to host everything as a static website on AWS. This ruled out Wordpress, which I really didn&rsquo;t want to go with because despite it being used for ~30% of the whole internet, is a ancient framework and frankly just too much for this project. The modern way is JAMStack, and the perfect candidate was <a href="https://gohugo.io/">Hugo</a>. Hugo is a static site generator with amazing features and a broad theme selection. It also allows you to write in <code>Markdown</code> which I so desperately love. The local setup is <strong>super</strong> easy and straighforward with their <a href="https://gohugo.io/getting-started/quick-start/">Quickstart</a> guide. I won&rsquo;t repeat what they have on their website, rather I&rsquo;ll just give my 2 cents on the experience and a kind-of guide.</p>
+<h4 id="lets-get-into-it">Let&rsquo;s get into it!</h4>
+<p>After installing Hugo with <code>brew</code> and creating the quickstart template, I looked around for a minimalist theme and found <a href="https://themes.gohugo.io/amperage/">Amperage</a>. I modified the <code>config.toml</code> a bit until I ended up with something I like. I don&rsquo;t have much experience in HTML&amp;CSS and since Hugo was a brand new framework for me, I turned to YouTube for a ~20min tutorial which gave me everything I needed. In the process, I realized how <strong>great</strong> the JAMStack architecture is and how easy it is to deploy and create static websites.</p>
+<p>Since I wanted this blog to be hosted straight in S3, I added the extra resources in my current CloudFormation template for my resume project, did a <code>git push</code> and my existing GitHub Actions CI/CD pipeline for the backend handled the rest. There is a seperate repository for this blog on my GitHub as well and it has it&rsquo;s own CI/CD workflow, but I wanted to deploy it from my machine first. This is where I scratched my head a bit, because the <code>hugo deploy</code> command doesn&rsquo;t currently support using the <code>--profile</code> flag like the AWS CLI, and my website lives in an Organizations sub-account. Fear none, <code>nano ~/.aws/credentials</code> and set the default access keys to the correct ones. I did a <code>hugo deploy --dryRun</code> at first as any cautious techie would do (<em>right?</em>) and it grabbed the instructions from my previously configured <code>config.toml</code> file. All in all, it was wonderfully easy to get everything up &amp; running in less than an hour including the theme, the basic- and the deployment configs.</p>
+<p>One gotcha I realized is that you <em>have to build the static site</em> before you want to deploy. This is done by simply executing the <code>hugo</code> command in the project&rsquo;s root directory. This builds the static files, &ldquo;compiling&rdquo; everything into a finished product. The error you get if you don&rsquo;t do this says <code>the folder /public does not exist</code> - this is the reason why.</p>
+<p><img src="https://media.giphy.com/media/YQitE4YNQNahy/giphy.gif" alt="hacker"></p>
+<h4 id="github-actions-cicd-for-hugo">GitHub Actions CI/CD for Hugo</h4>
+<p>Humans make mistakes all the time and we&rsquo;re pretty unreliable at doing tasks in a precise and repeatable manner. This is why I opted to use a GitHub Actions workflow to deploy this site from its repository to the S3 bucket as well. Hugo is very developer-friendly so there are clear instructions and a pre-made GitHub action by a community member. I grabbed the template, added my <em>deploy-to-s3</em> job and <code>git push</code> that baby. Here&rsquo;s the <code>main.yml</code> file for the workflow:</p>
+<pre><code class="language-linenos=table" data-lang="linenos=table">name: Deploy to S3 bucket
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  deploy:
+    runs-on: ubuntu-18.04
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          submodules: true  # Fetch Hugo themes (true OR recursive)
+          fetch-depth: 0    # Fetch all history for .GitInfo and .Lastmod
+
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v2
+        with:
+          hugo-version: &#39;latest&#39;
+          # extended: true
+
+      - name: Configure AWS Credentials
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: us-east-1
+          
+      - name: Hugo build
+        run: hugo --minify
+
+      - name: Hugo deploy static site to S3 bucket
+        run: hugo deploy</code></pre>
+<p>As you see, you should <strong>never</strong> commit access and secret keys to your repos. This is why you see <code>AWS_ACCESS_KEY_ID</code> in the <em>Configure AWS Credentials</em> part. GitHub offers <code>Secrets</code> which are encrypted environment variables that you can reference in your workflows and they are safe to use (even in public repos).</p>
+<p><img src="https://media.giphy.com/media/lkK7hFTOp1s4g/giphy.gif" alt="itshappening"></p>
+<h4 id="the-aws-side">The AWS side</h4>
+<p>After all the backend was established - the CloudFront distribution, the CI/CD pipeline, the CloudFormation template - the only thing left was to add the <code>blog.heyitschris.com</code> entry into Route53. There is a deployment pipeline for every piece of the whole website at this point, so this step was nothing more than an extra resource in the CloudFormation template and <code>git push</code>. The resource deployed, this sentence finished and this blog&rsquo;s first iteration up &amp; running publicly.</p>
+<h4 id="closing-thoughts">Closing thoughts</h4>
+<p>If you&rsquo;d like to see the repo, you can <a href="https://github.com/what-name/heyitschris.com-blog">reach it here</a>.</p>
+
+</article>
+
 		</main>
 		<footer class="footer"><div class="footer__copyright">© Chris Nagy 2020</div><div class="footer__languages">
 	

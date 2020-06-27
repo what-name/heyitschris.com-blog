@@ -31,12 +31,12 @@ paginate = 5
     identifier = "Resume"
     name = "Resume"
     url = "https://heyitschris.com"
-    weight = 3
+    weight = 4
 [[menu.main]]
     identifier = "github"
     name = "GitHub"
     url = "https://github.com/what-name"
-    weight = 4
+    weight = 3
 [[menu.main]]
     identifier = "twitter"
     name = "Twitter"
@@ -68,7 +68,7 @@ paginate = 5
     twitterSite = "@chris_the_nagy"
 
     # Structured data elements
-    socialProfiles = ["https://twitter.com/chris_the_nagy","https://www.linkedin.com/in/example/","https://github.com/example"]
+    socialProfiles = ["https://twitter.com/chris_the_nagy","https://www.linkedin.com/in/example/","https://github.com/what-name"]
 
     alternatePageName = "Hey, it's Chris"
     organizationLogo = "/logo.png"
@@ -82,10 +82,8 @@ paginate = 5
 [deployment]
 [[deployment.targets]]
 name = "heyItsChrisBlogDeployment"
-# S3; see https://gocloud.dev/howto/blob/#s3
-# For S3-compatible endpoints, see https://gocloud.dev/howto/blob/#s3-compatible
 URL = "s3://heyitschris-com-blog?region=us-east-1"
 
 # If you are using a CloudFront CDN, deploy will invalidate the cache as needed.
-# User does not have access to this resource as of right now
+# INFO: IAM github-cicd-user does not have access to this resource as of right now
 # cloudFrontDistributionID = <ID>

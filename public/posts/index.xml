@@ -6,18 +6,18 @@
     <description>Recent content in Posts on Blog | Hey, it&#39;s Chris</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 26 Jun 2020 23:33:52 +0200</lastBuildDate>
+    <lastBuildDate>Sat, 27 Jun 2020 16:12:39 +0200</lastBuildDate>
     
 	<atom:link href="https://blog.heyitschris.com/posts/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>That Post</title>
-      <link>https://blog.heyitschris.com/posts/that-post/</link>
-      <pubDate>Fri, 26 Jun 2020 23:33:52 +0200</pubDate>
+      <title>How it&#39;s made: This Blog</title>
+      <link>https://blog.heyitschris.com/posts/a-blog-post-about-my-blog/</link>
+      <pubDate>Sat, 27 Jun 2020 16:12:39 +0200</pubDate>
       
-      <guid>https://blog.heyitschris.com/posts/that-post/</guid>
-      <description>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris in dignissim est, ac blandit velit. Aenean sed velit posuere, placerat nunc nec, bibendum tellus. Nulla suscipit nunc in mi semper, nec pharetra mi vehicula. Proin in odio ac metus scelerisque consequat ut vel felis. Nulla imperdiet vel nisi eget varius. Ut fermentum metus non tristique facilisis. Donec id congue metus, vitae pellentesque erat. Nulla quis vehicula tortor. Duis eu eros urna.</description>
+      <guid>https://blog.heyitschris.com/posts/a-blog-post-about-my-blog/</guid>
+      <description>How it&amp;rsquo;s made: This Blog. I&amp;rsquo;ve always wanted to have a blog. Putting my thoughts into writing has always benefitted me and I&amp;rsquo;ve definitely started paying more attention to do it as often as I can. After I completed Forrest Brazeal&amp;rsquo;s Cloud Resume Challange and had my own website running on Serverless AWS, I thought why not extend it with a blog. I wrote some articles on my Medium page as well, but seeing #100DaysOfCode &amp;amp; #100DaysOfCloud take off, I decided it&amp;rsquo;s time to make my own.</description>
     </item>
     
   </channel>
