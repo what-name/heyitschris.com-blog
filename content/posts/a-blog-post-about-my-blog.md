@@ -70,5 +70,8 @@ As you see, you should **never** commit access and secret keys to your repos. Th
 #### The AWS side
 After all the backend was established - the CloudFront distribution, the CI/CD pipeline, the CloudFormation template - the only thing left was to add the `blog.heyitschris.com` entry into Route53. There is a deployment pipeline for every piece of the whole website at this point, so this step was nothing more than an extra resource in the CloudFormation template and `git push`. The resource deployed, this sentence finished and this blog's first iteration up & running publicly.
 
+#### Problems after the deployment
+Here is the part that makes this setup quite complicated on the backend to work. Since I am using CloudFront as a CDN in front of the bucket, using an `S3Origin` resource gives an **Access Denied** any of the `/posts/this-post` URLs. The reason I still haven't fully understood but the main point is that with Hugo, the distribution has to have the S3 Website **Endpoint URL** as an origin, meaning this: `${BlogWebsiteBucket}.s3-website-${AWS::Region}.amazonaws.com`. In order to do this, the bucket has to have all public access, since it's impossible to use an OAI with an endpoint URL. [This blog post helped me](https://lustforge.com/2016/02/27/hosting-hugo-on-aws/) figure it out, but I'll be writing one on here as well detailing the CloudFormation template.
+
 #### Closing thoughts
 If you'd like to see the repo, you can [reach it here](https://github.com/what-name/heyitschris.com-blog)!
