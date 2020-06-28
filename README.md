@@ -1,3 +1,5 @@
+![Deployment](https://github.com/what-name/heyitschris.com-blog/workflows/Deploy%20to%20S3%20bucket/badge.svg)
+
 ## Info
 This repository contains my personal blog's Hugo project.
 [blog.heyitschris.com](https://blog.heyitschris.com)
