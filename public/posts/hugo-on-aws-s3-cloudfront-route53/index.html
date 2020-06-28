@@ -3,20 +3,18 @@
 	<head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
 
-<title>Tags</title>
-    
-
+<title>Hugo on AWS - S3/Cloudfront/Route53</title>
     
 <meta name="description" content="" />
-<link rel="canonical" href="https://blog.heyitschris.com/tags/" >
-<link rel="sitemap" href="https://blog.heyitschris.com/sitemap.xml" type="application/xml" /><meta property="og:title" content="Tags">
-<meta property="og:url" content="https://blog.heyitschris.com/tags/">
+<link rel="canonical" href="https://blog.heyitschris.com/posts/hugo-on-aws-s3-cloudfront-route53/" >
+<link rel="sitemap" href="https://blog.heyitschris.com/sitemap.xml" type="application/xml" /><meta property="og:title" content="Hugo on AWS - S3/Cloudfront/Route53">
+<meta property="og:url" content="https://blog.heyitschris.com/posts/hugo-on-aws-s3-cloudfront-route53/">
 <meta property="og:description" content="">
 <meta property="og:image" content="https://blog.heyitschris.com/logo.png">
 <meta property="og:type" content="article">
 <meta property="og:site_name" content=""><meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Tags">
-<meta name="twitter:url" content="https://blog.heyitschris.com/tags/">
+<meta name="twitter:title" content="Hugo on AWS - S3/Cloudfront/Route53">
+<meta name="twitter:url" content="https://blog.heyitschris.com/posts/hugo-on-aws-s3-cloudfront-route53/">
 <meta name="twitter:description" content="">
 <meta name="twitter:image" content="https://blog.heyitschris.com/logo.png">
 <meta name="twitter:site" content="@chris_the_nagy"><meta name="theme-color" content="#333"/>
@@ -56,6 +54,12 @@
   
   
   
+    
+  
+
+  
+  
+  
 
 
 <script type="application/ld+json">
@@ -79,23 +83,73 @@
           "@type": "ListItem",
           "position":  2 ,
           "item": {
-            "@id": "https:\/\/blog.heyitschris.com\/tags\/",
-            "name": "Tags"
+            "@id": "https:\/\/blog.heyitschris.com\/posts\/",
+            "name": "Posts"
+          }
+        }
+      
+        ,
+        {
+          "@type": "ListItem",
+          "position":  3 ,
+          "item": {
+            "@id": "https:\/\/blog.heyitschris.com\/posts\/hugo-on-aws-s3-cloudfront-route53\/",
+            "name": "Hugo on aws s3 cloudfront route53"
           }
         }
        ]
   }
-</script>
-  <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "ItemList",
-      "itemListElement": [
-        
-      ]
-    }
-  </script>
-<header class="header"><nav class="header__menu">
+</script><script type="application/ld+json">
+  {
+    "@context":"http://schema.org",
+    "@type": "BlogPosting",
+    "image": "https:\/\/blog.heyitschris.com",
+    "url": "https:\/\/blog.heyitschris.com\/posts\/hugo-on-aws-s3-cloudfront-route53\/",
+    "headline": "Hugo on AWS - S3\/Cloudfront\/Route53",
+    "alternativeHeadline": "Hugo on AWS - S3\/Cloudfront\/Route53",
+    "dateCreated": "2020-06-28T13:45:24",
+    "datePublished": "2020-06-28T13:45:24",
+    "dateModified": "2020-06-28T13:45:24",
+    "inLanguage": "en",
+    "isFamilyFriendly": "true",
+    "copyrightYear": "2020",
+    "copyrightHolder": "",
+    "accountablePerson": {
+      "@type": "Person",
+      "name": "",
+      "url": ""
+    },
+    "author": {
+      "@type": "Person",
+      "name": "",
+      "url": "https:\/\/blog.heyitschris.com",
+      "image": "https:\/\/blog.heyitschris.com",
+      "description": ""
+    },
+    "creator": {
+      "@type": "Person",
+      "name": "",
+      "url": "https:\/\/blog.heyitschris.com",
+      "image": "https:\/\/blog.heyitschris.com",
+      "description": ""
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Hey, it\u0027s Chris",
+      "url": "https:\/\/blog.heyitschris.com",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "\/",
+        "width":"600",
+        "height":"60"
+      }
+    },
+    "mainEntityOfPage": "https:\/\/blog.heyitschris.com\/posts\/hugo-on-aws-s3-cloudfront-route53\/",
+    "keywords": "null",
+    "genre": "null",
+    "articleSection": "Posts"
+  }
+</script><header class="header"><nav class="header__menu">
     <a class="header__menu__logo" data-rel="prefetch" href="https://blog.heyitschris.com" aria-label="Go back to the homepage"></a>
 <ul class="header__menu__list">
     
@@ -145,9 +199,118 @@
 </ul></nav></header>
 		<main class="main">
 	<article class="content">
-		
-	</article>
-	
+		<h2 id="how-to-host-a-hugo-static-site-on-aws-serverless-with-cloudformation">How to host a Hugo static site on AWS Serverless with CloudFormation.</h2>
+<p>I built this blog with Hugo and wanted to host it on my already existing AWS S3 static site infrastructure. The problem was however that the main page loaded no problem, but anything in <code>/posts/this-post</code> would get an <code>AccessDenied</code> error. While I haven&rsquo;t figured out <em>why</em> this problem exists, I did make it work and now I&rsquo;m sharing the setup here since there is no clear-cut guide on Hugo for this setup.</p>
+<h4 id="notes">Notes</h4>
+<p>You can not use an <code>OAI</code> with Hugo. You need to use the <strong>Endpoint URL</strong> of the S3 bucket as the origin for your CloudFront distribution. An endpoint URL looks like this: <code>myblogbucket.s3-website-us-east-1.amazonaws.com</code>. Notice the region, this is the endpoint URL of your bucket, and you can get this from the <code>Properties-&gt;Static Website Hosting</code> submenu in the console inside the origin bucket.</p>
+<h3 id="the-resources">The resources</h3>
+<p>Here are the most important resources and their properties with a YAML CloudFormation template.</p>
+<h4 id="the-blog-bucket-itself">The blog bucket itself</h4>
+<p>I added the CORS configuration, you might not need it. <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket.html">See AWS CloudFormation S3 reference</a>
+<pre><code class="language-linenos=table" data-lang="linenos=table">BlogWebsiteBucket:
+  Type: AWS::S3::Bucket
+  Properties:
+    BucketName: &#34;mywebsite-blog&#34;
+    WebsiteConfiguration:
+      IndexDocument: index.html
+    CorsConfiguration:
+      CorsRules:
+        - 
+          AllowedMethods: 
+            - GET
+            - HEAD
+          AllowedOrigins: 
+            - &#34;*&#34;
+          AllowedHeaders: 
+            - &#34;*&#34;</code></pre></p>
+<h4 id="the-blog-bucket-policy">The blog bucket policy</h4>
+<p>As I said you <strong>can not use an OAI</strong> with your CloudFront distribution here because you need the endpoint URL of the bucket for Hugo to be able to do its job. For this reason, you need to give public read access to the bucket. While this is not a perfect solution, it&rsquo;s the one that worked for me and I&rsquo;m willing to sacrifice this much security. (if you know a better way of doing this, please hit me up on <a href="https://twitter.com/chris_the_nagy">Twitter</a>) <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-policy.html">See AWS CloudFormation S3 bucket policy reference</a>
+<pre><code class="language-linenos=table" data-lang="linenos=table">BlogWebsiteBucketBucketPolicy:
+    Type: AWS::S3::BucketPolicy
+    Properties:
+      PolicyDocument:
+        Id: PublicAccessPolicy
+        Version: 2012-10-17
+        Statement:
+          - Sid: PublicReadForGetBucketObjects
+            Effect: Allow
+            Principal: &#34;*&#34;
+            Action: s3:GetObject
+            Resource: !Sub &#34;arn:aws:s3:::${BlogWebsiteBucket}/*&#34;
+      Bucket: !Ref BlogWebsiteBucket</code></pre></p>
+<h4 id="the-cloudfront-distribution">The CloudFront distribution</h4>
+<p>This is the most important part and I spent most of the troubleshooting time on this. The important part here is that we&rsquo;re not using an <code>S3Origin</code> but a <code>CustomOriginConfig</code> pointing to the endpoint URL of the S3 bucket. It&rsquo;s important to set the <code>DefaultRootObject: index.html</code> on both the distribution and the origin S3 bucket, otherwise your browser will try to <em>list</em> the contents of your bucket (and prefix) instead of serving you the page. <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudfront-distribution.html">See AWS CloudFormation CloudFront reference</a>
+<pre><code class="language-linenos=table" data-lang="linenos=table">BlogCloudFrontDistribution:
+  Type: AWS::CloudFront::Distribution
+  Properties:
+    DistributionConfig:
+      Origins:
+      - Id: !Sub &#34;${BlogWebsiteBucket}-origin&#34;
+        CustomOriginConfig: 
+          OriginProtocolPolicy: http-only
+          HTTPPort: 80
+          OriginSSLProtocols: 
+            - TLSv1
+            - TLSv1.1
+            - TLSv1.2
+          HTTPSPort: 443
+        DomainName: !Sub &#34;${BlogWebsiteBucket}.s3-website-${AWS::Region}.amazonaws.com&#34;
+      Enabled: true
+      Comment: Static blog website distribution
+      DefaultRootObject: index.html
+      Aliases:
+        - blog.yourwebsite.com # Change this to your domain!
+      DefaultCacheBehavior:
+        DefaultTTL: 1800
+        MaxTTL: 14400
+        Compress: true
+        AllowedMethods:
+          - HEAD
+          - GET
+        CachedMethods:
+          - HEAD
+          - GET
+        TargetOriginId: !Sub &#34;${BlogWebsiteBucket}-origin&#34;
+        ForwardedValues:
+          QueryString: &#39;false&#39;
+        ViewerProtocolPolicy: redirect-to-https
+      PriceClass: PriceClass_100
+      ViewerCertificate:
+        AcmCertificateArn: !Ref DomainCertificate
+        SslSupportMethod: sni-only</code></pre></p>
+<h4 id="the-route53-entry">The Route53 Entry.</h4>
+<p>Pay attention to the <code>HostedZoneId</code> of the <code>AliasTarget</code>! Took me a while to figure out that <strong>all</strong> CloudFront distributions live in the same hosted zone <code>Z2FDTNDATAQYW2</code>. <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-recordset.html">See AWS CloudFormation Route53 RecordSet reference</a>
+<pre><code class="language-linenos=table" data-lang="linenos=table"> DNSRecordBlog:
+    Type: AWS::Route53::RecordSet
+    Properties:
+      Name: !Sub &#34;blog.${WebsiteDomainName}&#34;
+      Type: A
+      # Refers to the HostedZone resource that I didn&#39;t include here
+      HostedZoneId: !Ref HostedZone
+      AliasTarget:
+        DNSName: !GetAtt BlogCloudFrontDistribution.DomainName
+        HostedZoneId: Z2FDTNDATAQYW2</code></pre></p>
+<h4 id="acm-cert">ACM Cert</h4>
+<p>And finally a little extra, the ACM certificate for both the main <code>mydomain.com</code> and the wildcard <code>*.mydomain.com</code>. The little <em>gotcha</em> here is that the main cert is the wildcard, and the main domain is only an alternative name. <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-certificatemanager-certificate.html">See AWS CloudFormation Certificate Manager reference.</a></p>
+<p>🚨Important to remember here that your CloudFormation stack will not proceed until you verify your domain via the email ACM sends to the adress that&rsquo;s registered with the domain!</p>
+<pre><code class="language-linenos=table" data-lang="linenos=table">DomainCertificate:
+  Type: AWS::CertificateManager::Certificate
+  Properties:
+    DomainName: !Sub &#34;*.${WebsiteDomainName}&#34;
+    SubjectAlternativeNames:
+      - !Ref WebsiteDomainName
+      - !Sub &#34;*.${WebsiteDomainName}&#34;
+    DomainValidationOptions:
+      - DomainName: !Ref WebsiteDomainName
+        ValidationDomain: !Ref WebsiteDomainName
+    ValidationMethod: EMAIL</code></pre>
+<h3 id="closing-thoughts">Closing Thoughts</h3>
+<p>I like <a href="https://gohugo.io/">Hugo</a> a lot. It&rsquo;s a very easy and developer friendly way of creating and updating static sites and blogs. This setup is not the &ldquo;usual&rdquo; way of hosting a Hugo site but it is an option and works well in my opinion while maintaining ultra low cost (my whole website costs me less than 5 cents a month).</p>
+<p>If you have any thoughts, questions or recommendations, hit me up on <a href="https://twitter.com/chris_the_nagy">Twitter</a> or at <a href="mailto:contact@heyitschris.com">contact@heyitschris.com</a>.</p>
+<p><em>This post was written on 28th of June 2020.</em></p>
+
+</article>
+
 		</main>
 		<footer class="footer"><div class="footer__copyright">© Chris Nagy 2020</div><div class="footer__languages">
 	
