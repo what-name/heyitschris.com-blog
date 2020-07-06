@@ -29,5 +29,15 @@
       <description>How it&amp;rsquo;s made: This Blog. I&amp;rsquo;ve always wanted to have a blog. Putting my thoughts into writing has always benefitted me and I&amp;rsquo;ve definitely started paying more attention to do it as often as I can. After I completed Forrest Brazeal&amp;rsquo;s Cloud Resume Challange and had my own website running on Serverless AWS, I thought why not extend it with a blog. I wrote some articles on my Medium page as well, but seeing #100DaysOfCode &amp;amp; #100DaysOfCloud take off, I decided it&amp;rsquo;s time to make my own.</description>
     </item>
     
+    <item>
+      <title>The Cloud Resume Challenge</title>
+      <link>https://blog.heyitschris.com/posts/cloud-resume-challenge/</link>
+      <pubDate>Tue, 23 Jun 2020 19:23:25 +0200</pubDate>
+      
+      <guid>https://blog.heyitschris.com/posts/cloud-resume-challenge/</guid>
+      <description>The Cloud Resume Challenge was way more fun than I thought A.K.A. the story of heyitschris.com
+⚠️Update  This was initially published on Medium. Since I created my own blog, I saw no reason not to migrate this post to this platform. Since this post was published, I have fixed all the small issues on the infrastructure side, improved the CI/CD workflow, implemented unit tests for my Lambda function and converted the CloudFormation template to SAM.</description>
+    </item>
+    
   </channel>
 </rss>

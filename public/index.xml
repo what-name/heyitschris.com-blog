@@ -39,5 +39,15 @@
 I travelled the world for the past 2 years (🇹🇭🇵🇭🇺🇸🇭🇰🇲🇴🇦🇪🇬🇧🇮🇩) and taught english in China🇨🇳 as well. I&amp;rsquo;m a supporter of the conscious consumption and use of psychedelics🍄 in order to better understand ourselves and our society.</description>
     </item>
     
+    <item>
+      <title>The Cloud Resume Challenge</title>
+      <link>https://blog.heyitschris.com/posts/cloud-resume-challenge/</link>
+      <pubDate>Tue, 23 Jun 2020 19:23:25 +0200</pubDate>
+      
+      <guid>https://blog.heyitschris.com/posts/cloud-resume-challenge/</guid>
+      <description>The Cloud Resume Challenge was way more fun than I thought A.K.A. the story of heyitschris.com
+⚠️Update  This was initially published on Medium. Since I created my own blog, I saw no reason not to migrate this post to this platform. Since this post was published, I have fixed all the small issues on the infrastructure side, improved the CI/CD workflow, implemented unit tests for my Lambda function and converted the CloudFormation template to SAM.</description>
+    </item>
+    
   </channel>
 </rss>
