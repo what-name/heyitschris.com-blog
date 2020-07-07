@@ -1,7 +1,7 @@
 ---
 title: "AWS - How to Host Your Own Blog (for beginners)"
 date: 2020-07-07T15:05:46+02:00
-draft: true
+draft: false
 ---
 
 ## AWS - How to Host Your Own Blog (for beginners)
