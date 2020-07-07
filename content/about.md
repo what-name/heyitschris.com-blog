@@ -12,7 +12,7 @@ I travelled the world for the past 2 years (🇹🇭🇵🇭🇺🇸🇭🇰🇲
 
 I've worked as a 👨🏻‍💻 Junior SysAdmin for a while but had a bunch of other, completely unrelated jobs as well. I believe having experience in different fields can offer a better understanding and broader vision in all areas of life if you're willing to notice the patterns. I'm focusing on the Cloud☁ at the moment and actively learning as much as I can about it & it's surrounding topics such as DevOps, security, scalability and reliability.
 
-I speak three languages fluently 🇺🇸🇩🇪🇭🇺 and can find beer & cigarettes in 🇪🇸. I'm interested in just about any topic and very much open to thoughtful conversations. Hit me up at contact@heyitschris.com or on [Twitter](https://twitter.com/chris_the_nagy) and let's chat about stuff! Human rights, tech, music, adventures, cultures, politics, weed, vaping, DIY - you name it.
+I speak three languages fluently 🇺🇸🇩🇪🇭🇺 and can find beer & cigarettes in 🇪🇸. I'm interested in just about any topic and very much open to thoughtful conversations. Hit me up at chris@heyitschris.com or on [Twitter](https://twitter.com/chris_the_nagy) and let's chat about stuff! Human rights, tech, music, adventures, cultures, politics, weed, vaping, DIY - you name it.
 
 * * *
 

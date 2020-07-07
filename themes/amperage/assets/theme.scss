@@ -5,12 +5,12 @@ body {
 	grid-gap: 1em 1em;
 	font-size: 1.2em;
 	font-family: Courier New, sans-serif;
-	line-height: 1.6;
+	line-height: 1.5;
 	color: black;
 }
 
 .header, .main, .footer {
-	grid-column: 4 / span 6;
+	grid-column: 3 / span 8;
 }
 
 .header {
