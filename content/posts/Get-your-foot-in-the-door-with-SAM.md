@@ -1,5 +1,5 @@
 ---
-title: "How to get your SAM🐿 Hello World done easily"
+title: "How to get your SAM🐿 Hello World done easily - SAM_01"
 date: 2020-07-08T14:37:53+02:00
 draft: false
 ---
